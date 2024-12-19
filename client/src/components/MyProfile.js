@@ -23,7 +23,7 @@ export default function MyProfile() {
   const AddNewYear = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/AddNewYear", { ...Year })
+      await axios.post("https://fin-wise-server.vercel.app/AddNewYear", { ...Year })
         .then(result => {
           console.log(result)
           alert('New Year Added')
@@ -38,7 +38,7 @@ export default function MyProfile() {
   const AddNewMonth = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/AddNewMonth", { ...Month })
+      await axios.post("https://fin-wise-server.vercel.app/AddNewMonth", { ...Month })
         .then(result => {
           console.log(result)
           alert('New Month Added')
@@ -53,7 +53,7 @@ export default function MyProfile() {
   const AddNewExpenseCategory = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/AddNewExpenseCategory", { ...ExpenseCategory })
+      await axios.post("https://fin-wise-server.vercel.app/AddNewExpenseCategory", { ...ExpenseCategory })
         .then(result => {
           console.log(result)
           alert('New Expense Category Added')
@@ -67,27 +67,27 @@ export default function MyProfile() {
 
   const [AllYear, setAllYear] = useState();
   useEffect(() => {
-    axios.get('http://localhost:3001/GetYear')
+    axios.get('https://fin-wise-server.vercel.app/GetYear')
       .then(result => setAllYear(result.data))
       .catch(error => console.log(error))
   }, [])
 
   const [AllMonth, setAllMonth] = useState();
   useEffect(() => {
-    axios.get('http://localhost:3001/GetMonth')
+    axios.get('https://fin-wise-server.vercel.app/GetMonth')
       .then(result => setAllMonth(result.data))
       .catch(error => console.log(error))
   }, [])
 
   const [AllExpenseCategories, setAlExpenseCategories] = useState();
   useEffect(() => {
-    axios.get('http://localhost:3001/GetExpenseCategory')
+    axios.get('https://fin-wise-server.vercel.app/GetExpenseCategory')
       .then(result => setAlExpenseCategories(result.data))
       .catch(error => console.log(error))
   }, [])
 
   const DeleteYear = async (id) => {
-    axios.delete('http://localhost:3001/DeleteYear/' + id)
+    axios.delete('https://fin-wise-server.vercel.app/DeleteYear/' + id)
       .then(result => {
         console.log(result)
         window.location.reload();
@@ -101,7 +101,7 @@ export default function MyProfile() {
   });
 
   const GetYear = async (id) => {
-    axios.get('http://localhost:3001/GetYear/' + id)
+    axios.get('https://fin-wise-server.vercel.app/GetYear/' + id)
       .then(result => setEditYear(result.data))
       .catch(error => console.log(error))
   }
@@ -109,7 +109,7 @@ export default function MyProfile() {
   const EditYearInfo = async (id, e) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:3001/EditYearInfo/" + id, { ...EditYear })
+      await axios.put("https://fin-wise-server.vercel.app/EditYearInfo/" + id, { ...EditYear })
         .then(result => {
           console.log(result);
           alert('Edited');
