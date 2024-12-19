@@ -11,7 +11,7 @@ export default function Loginpage() {
     const AddUser = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3001/AddUser', { username: Username, password: Password })
+            await axios.post('https://fin-wise-server.vercel.app/AddUser', { username: Username, password: Password })
                 .then(result => {
                     alert('User Registration Successful');
                     console.log(result.data); // Log the response from the server
@@ -25,7 +25,7 @@ export default function Loginpage() {
 
     const CheckUser = async (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/CheckUser', { username: Username, password: Password }) // Pass username and password
+        axios.post('https://fin-wise-server.vercel.app/CheckUser', { username: Username, password: Password }) // Pass username and password
             .then(result => {
                 if (result.data.message === 'Login Successful') {
                     alert(result.data.message); // Show login successful message
