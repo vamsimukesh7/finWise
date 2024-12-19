@@ -42,7 +42,7 @@ export default function Budgeting() {
 
     const [AllCustomPlans, setAllCustomPlans] = useState();
     useEffect(() => {
-        axios.get('http://localhost:3001/GetCustomPlans')
+        axios.get('https://fin-wise-server.vercel.app/GetCustomPlans')
             .then(result => setAllCustomPlans(result.data))
             .catch(error => console.log(error))
     }, [])
@@ -50,7 +50,7 @@ export default function Budgeting() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3001/AddCustomPlan', CustomPlan)
+            await axios.post('https://fin-wise-server.vercel.app/AddCustomPlan', CustomPlan)
                 .then(result => {
                     console.log(result)
                     alert('New Custom plan Added')
