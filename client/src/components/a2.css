@@ -1,0 +1,53 @@
+.part2-container {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .left-content {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .right-content {
+    flex: 1;
+  }
+  
+  .website-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .p21 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    justify-content: end;
+  }
+  .about-us-box {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 20px 40px;
+    width: 100px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+  
+  .about-us-box:hover {
+    background-color: #000;
+  }
+  .right-content {
+    perspective: 1000px; /* Set perspective for 3D effect */
+  }
+  
+  .website-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.5s ease; /* Add transition for smooth animation */
+  }
+  
+  .flip:hover .website-image {
+    transform: rotateY(180deg); /* Rotate image on hover */
+  }

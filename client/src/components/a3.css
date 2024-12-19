@@ -1,0 +1,35 @@
+.part3-container {
+    width: 100%;
+  }
+  
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .left-content1 {
+    flex: 1;
+    padding-right: 20px;
+    text-align: justify;
+    margin-right: 40%;
+  }
+  
+  .right-content1 {
+    margin-top: -7%;
+    flex: 1;
+    margin-right: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .feature-image {
+    max-width: 20%;
+    height: auto;
+    border-radius: 8px;
+  }
+  h2 {
+    text-align: center;
+  }
