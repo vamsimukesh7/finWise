@@ -13,7 +13,7 @@ export default function Investing() {
     })
 
     useEffect(() => {
-        axios.get('http://localhost:3001/GetStocksData')
+        axios.get('https://fin-wise-server.vercel.app/GetStocksData')
             .then(result => setStocksData(result.data))
             .catch(error => console.log(error))
     }, [])
